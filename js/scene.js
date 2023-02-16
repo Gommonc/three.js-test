@@ -2,17 +2,17 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 // init
+const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
 camera.position.z = 1;
 
-const scene = new THREE.Scene();
 
 const geometry = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
 const material = new THREE.MeshNormalMaterial();
 
-const gltfloader = new GLTFLoader();
-gltfloader.load();
+// const gltfloader = new GLTFLoader();
+// gltfloader.load();
 
 const mesh = new THREE.Mesh( geometry, material );
 scene.add( mesh );
